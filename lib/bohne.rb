@@ -22,8 +22,6 @@ module Bohne
   	  rootView = document.elements['objects'].elements['view']
       rootCollectionViewCell = document.elements['objects'].elements['collectionViewCell']
       rootTableViewCell = document.elements['objects'].elements['tableViewCell']
-
-      rootViewRect
       
       if rootView != nil 
         rootViewRect = rootView.elements['rect']
