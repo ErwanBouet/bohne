@@ -20,7 +20,19 @@ module Bohne
   	  document.elements['dependencies'].elements['deployment'].remove
 
   	  rootView = document.elements['objects'].elements['view']
-  	  rootViewRect = rootView.elements['rect']
+      rootCollectionViewCell = document.elements['objects'].elements['collectionViewCell']
+      rootTableViewCell = document.elements['objects'].elements['tableViewCell']
+
+      rootViewRect
+      
+      if rootView != nil 
+        rootViewRect = rootView.elements['rect']
+      elsif rootCollectionViewCell != nil 
+        rootViewRect = rootCollectionViewCell.elements['rect']
+      elsif rootTableViewCell != nil
+        rootViewRect = rootTableViewCell.elements['rect']
+      end
+      
   	  rootViewRect.attributes['width'] = '1920'
   	  rootViewRect.attributes['height'] = '1080'
   	end
